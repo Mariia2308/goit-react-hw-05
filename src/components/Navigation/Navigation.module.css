@@ -1,0 +1,26 @@
+.nav {
+    border-bottom: 2px solid black;
+    position: sticky;
+    top: 0;
+    
+
+}
+.list{
+    list-style: none;
+        display: flex;
+            flex-direction: row;
+                gap: 15px;
+}
+.link {
+    color: black;
+    text-decoration: none;
+    
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.active {
+    color: orange;
+}
