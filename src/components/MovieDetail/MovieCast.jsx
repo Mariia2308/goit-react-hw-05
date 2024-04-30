@@ -20,7 +20,7 @@ function MovieCast() {
     <div>
       
       {movieCast && (
-        <ul className={css["cast-list"]}>
+        <ul className={css.castlist}>
           {movieCast.map(({ name, id, profile_path, character }) => (
             <li key={id}>
               <div className={css.card}>

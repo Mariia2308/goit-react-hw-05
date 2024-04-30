@@ -7,7 +7,7 @@ function MovieList({ movies }) {
     <div>
       {movies.length > 0 && (
         <ul>
-          {movies.map(({ id, title }) => (
+          {movies &&movies.map(({ id, title }) => (
             <li key={id}>
               <Link to={`/movies/${id}`} state={location} rel="noreferrer noopener">
                 {title}
