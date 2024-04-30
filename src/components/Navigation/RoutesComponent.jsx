@@ -17,7 +17,8 @@ const RoutesComponent = () => {
     <main >
       <Suspense fallback={<Loader />}>
         <Routes>
-          <Route path='/' element={<HomePage />} />
+          <Route path='' element={<HomePage />} />
+
           <Route path='/movies' element={<MoviePage />} />
           <Route path='/movies/:movieId/*' element={<MovieDetailsPage />}>
             <Route path='cast' element={<MovieCast />} />
