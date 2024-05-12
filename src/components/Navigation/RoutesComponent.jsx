@@ -6,11 +6,11 @@ import '../../App.css';
 
 
 const HomePage = lazy(() => import('../../pages/HomePage'));
-const MoviePage = lazy(() => import('../../pages/MoviePage'));
+const MoviePage = lazy(() => import('../../pages/MoviesPage'));
 const NotFound = lazy(() => import('../../pages/NotFound'));
 const MovieDetailsPage = lazy(() => import("../../pages/MovieDetailsPage"));
-const MovieReviews = lazy(() => import('../../components/MovieDetail/MovieReviews'));
-const MovieCast = lazy(() => import('../../components/MovieDetail/MovieCast'));
+const MovieReviews = lazy(() => import("../MovieReviews/MovieReviews"));
+const MovieCast = lazy(() => import('../MovieCast/MovieCast'));
 
 const RoutesComponent = () => {
   return (
