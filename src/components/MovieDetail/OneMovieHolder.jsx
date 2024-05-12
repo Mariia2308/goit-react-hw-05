@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 //import MovieReviews from './MovieReviews';
 
 
+
 function OneMovieHolder({ movieDetails }) {
+  
   return (
     <div>
       {movieDetails && (

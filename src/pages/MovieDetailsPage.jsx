@@ -1,18 +1,21 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { fetchMovieDetails } from '../services/movies';
 import { useParams, Outlet, useLocation } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Loader from '../components/Loader/Loader';
 import Error from '../components/Error/Error';
-import css from '../components/MovieDetail/MovieDetail.module.css';
 import OneMovieHolder from '../components/MovieDetail/OneMovieHolder';
 
+
+
 function MovieDetailsPage() {
+
   const { movieId } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
   const location = useLocation();
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null); // Change error state to null
+  const [error, setError] = useState(null);
+  const backLinkURLRef = useRef(location.state ?? "/");
 
   useEffect(() => {
     async function fetchMovie() {
@@ -21,7 +24,7 @@ function MovieDetailsPage() {
         const movieDetailsResponse = await fetchMovieDetails(movieId);
         setMovieDetails(movieDetailsResponse);
       } catch (error) {
-        setError(error.message); // Set specific error message
+        setError(error.message); 
       } finally {
         setLoading(false);
       }
@@ -30,13 +33,11 @@ function MovieDetailsPage() {
     fetchMovie();
   }, [movieId]);
 
-  const backLinkHref = location.state ? location.state.from : '/';
+
 
   return (
     <div>
-      <NavLink className={css.link} to={backLinkHref}>
-      <button>Go Back</button>
-      </NavLink>
+      <Link to={backLinkURLRef.current}><button>Go back</button></Link>
       {loading && <Loader />}
       {error && <Error message={error} />} 
       {movieDetails && <OneMovieHolder movieDetails={movieDetails} />}
