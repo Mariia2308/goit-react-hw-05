@@ -6,7 +6,7 @@ export const SearchBar = ({ onSearch }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSearch(query.trim().toLowerCase());
-    setQuery(""); // Очистка поля ввода после отправки запроса
+    setQuery(""); 
   };
 
   const handleChange = (e) => {

@@ -1,6 +1,6 @@
 import { fetchMovieReviews } from "../../services/movies";
 import { useEffect, useState } from "react";
-import css from './MovieDetail.module.css';
+import css from '../MovieDetail/MovieDetail.module.css';
 import { useParams } from "react-router-dom";
 
 function MovieReviews() {
