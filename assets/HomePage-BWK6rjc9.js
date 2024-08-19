@@ -1,0 +1,2 @@
+import{r as o,j as e}from"./index-DgCK-Gfk.js";import{M as n}from"./MovieList-CGEr5KCT.js";import{f as a}from"./movies-mJJ1m02I.js";function v(){const[s,t]=o.useState([]);return o.useEffect(()=>{async function i(){const r=await a();t(r)}i()},[]),e.jsxs("div",{children:[e.jsx("h1",{children:"Trending today"}),e.jsx(n,{movies:s})]})}export{v as default};
+//# sourceMappingURL=HomePage-BWK6rjc9.js.map
