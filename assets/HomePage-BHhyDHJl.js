@@ -1,0 +1,2 @@
+import{r as o,j as e}from"./index-C8AUqx6P.js";import{M as n}from"./MovieList-Cm1I-VVn.js";import{f as a}from"./movies-mJJ1m02I.js";function v(){const[s,t]=o.useState([]);return o.useEffect(()=>{async function i(){const r=await a();t(r)}i()},[]),e.jsxs("div",{children:[e.jsx("h1",{children:"Trending today"}),e.jsx(n,{movies:s})]})}export{v as default};
+//# sourceMappingURL=HomePage-BHhyDHJl.js.map
